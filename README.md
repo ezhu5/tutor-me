@@ -25,4 +25,7 @@ then start the local chat server by running
 ```
 node index.js
 ```
-it should display: 'listening in http://localhost:3001'
+it should display: 
+```
+listening in http://localhost:3001
+```
