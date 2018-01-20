@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController,
-        ViewController,
-        PopoverController } from 'ionic-angular';
+import { ViewController, PopoverController } from 'ionic-angular';
 
 
 @Component({
   template: `
     <ion-list>
-      <ion-list-header>Ionic</ion-list-header>
-      <button ion-item (click)="close()">Learn Ionic</button>
-      <button ion-item (click)="close()">Documentation</button>
-      <button ion-item (click)="close()">Showcase</button>
-      <button ion-item (click)="close()">GitHub Repo</button>
+      <ion-list-header>Customize</ion-list-header>
+      <button ion-item (click)="close()">Add a class</button>
     </ion-list>
   `
 })
@@ -30,12 +25,14 @@ export class PopoverPage {
 })
 export class SearchPage {
 
+  position: string = "tutor";
+
   constructor(public popoverCtrl: PopoverController) {}
 
-  presentPopover() {
+  presentPopover(MyEvent) {
     let popover = this.popoverCtrl.create(PopoverPage);
     popover.present({
-      
+      ev: MyEvent
     });
   }
 }
