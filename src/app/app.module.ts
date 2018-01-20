@@ -11,6 +11,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +25,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp({
+        apiKey: "AIzaSyDNw_P3AssSiPxMQsSE-sc-tKRYouNZXhw",
+        authDomain: "tutor-me-5582a.firebaseapp.com",
+        databaseURL: "https://tutor-me-5582a.firebaseio.com",
+        projectId: "tutor-me-5582a",
+        storageBucket: "",
+        messagingSenderId: "232229048331"
+      }),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
