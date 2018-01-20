@@ -39,7 +39,7 @@ export class LoginPage {
   }
 
   register() {
-    this.navCtrl.push(TabsPage)
+    this.navCtrl.push('RegisterPage')
   }
 
   ionViewDidLoad() {
