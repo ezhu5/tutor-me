@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Messages
+      Join Chat
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,5 +13,10 @@
       <ion-icon name="search" item-start></ion-icon>
       @ionicframework
     </ion-item>
+    <ion-item>
+      <ion-label stacked> Set Nickname</ion-label>
+      <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
+    </ion-item>
   </ion-list>
+  <button ion-button full (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
 </ion-content>
