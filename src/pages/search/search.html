@@ -17,25 +17,47 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-sliding>
 
-    <ion-item>
-      <ion-icon name="stats" item></ion-icon>
-      Statistics I
-    </ion-item>
+      <ion-item style="color:orangered">
+        <ion-icon name="stats" item></ion-icon>
+        Statistics I
+      </ion-item>
+      <ion-item-options side="right">
+          <button ion-button color="danger">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item>
-      <ion-icon name="flask" item></ion-icon>
-      Introductory Chemistry I
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item style="color:rgb(6, 76, 94)">
+        <ion-icon name="flask" item></ion-icon>
+        Introductory Chemistry I
+      </ion-item>
+      <ion-item-options side="right">
+          <button ion-button color="danger">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item>
-      <ion-icon name="logo-github" item></ion-icon>
-      Data Structures
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item style="color:rgb(255, 208, 0)">
+        <ion-icon name="logo-github" item></ion-icon>
+        Data Structures
+      </ion-item>
+      <ion-item-options side="right">
+          <button ion-button color="danger">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item>
-      <ion-icon name="calculator" item></ion-icon>
-      Calculus III
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item style="color:rgb(34, 0, 128)">
+        <ion-icon name="calculator" item></ion-icon>
+        Calculus III
+      </ion-item>
+      <ion-item-options side="right">
+          <button ion-button color="danger">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
+  </ion-list>
 </ion-content>
