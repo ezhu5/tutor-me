@@ -7,11 +7,16 @@ import { SearchPage } from '../pages/search/search';
 import { MessagePage } from '../pages/message/message';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { PopoverPage } from '../pages/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
+
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from "angularfire2/auth";
 
 
 @NgModule({
@@ -20,12 +25,22 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     SearchPage,
     MessagePage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    PopoverPage
   ],
   imports: [
     BrowserModule,
     SocketIoModule.forRoot(config),
-    IonicModule.forRoot(MyApp) 
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp({
+        apiKey: "AIzaSyDNw_P3AssSiPxMQsSE-sc-tKRYouNZXhw",
+        authDomain: "tutor-me-5582a.firebaseapp.com",
+        databaseURL: "https://tutor-me-5582a.firebaseio.com",
+        projectId: "tutor-me-5582a",
+        storageBucket: "",
+        messagingSenderId: "232229048331"
+      }),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,12 +48,13 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     SearchPage,
     MessagePage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    PopoverPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

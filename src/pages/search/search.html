@@ -1,11 +1,7 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons start>
-      <button ion-button icon-only>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-segment>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="position">
       <ion-segment-button value="tutor">
         Tutor
       </ion-segment-button>
@@ -13,9 +9,62 @@
         Tutee
       </ion-segment-button>
     </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content padding>
 
+<ion-content>
+  <div [ngSwitch]="position">
+    <ion-list *ngSwitchCase="'tutor'">
+      <ion-item-sliding>
+
+        <ion-item style="color:orangered">
+          <ion-icon name="stats" item></ion-icon>
+          Statistics I
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger">Delete</button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+        <ion-item style="color:rgb(6, 76, 94)">
+          <ion-icon name="flask" item></ion-icon>
+          Introductory Chemistry I
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger">Delete</button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+        <ion-item style="color:rgb(255, 208, 0)">
+          <ion-icon name="logo-github" item></ion-icon>
+          Data Structures
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger">Delete</button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'tutee'">
+        <ion-item-sliding>
+            <ion-item style="color:rgb(34, 0, 128)">
+              <ion-icon name="calculator" item></ion-icon>
+              Calculus III
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button color="danger">Delete</button>
+            </ion-item-options>
+          </ion-item-sliding>
+    </ion-list>
+  </div>
 </ion-content>
