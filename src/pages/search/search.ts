@@ -42,7 +42,7 @@ export class SearchPage {
     this.afAuth.authState.subscribe(data => {
       if (data.email && data.uid) {
         this.toast.create({
-          message: `Welcome to My First App, ${data.email}`,
+          message: `Welcome to TutorMe, ${data.email}`,
           duration: 3000
         }).present();
       } else {
