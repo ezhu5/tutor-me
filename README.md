@@ -29,3 +29,4 @@ it should display:
 ```
 listening in http://localhost:3001
 ```
+then you can start ionic lab
