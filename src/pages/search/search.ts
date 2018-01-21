@@ -43,12 +43,12 @@ export class SearchPage {
       if (data.email && data.uid) {
         this.toast.create({
           message: `Welcome to TutorMe, ${data.email}`,
-          duration: 3000
+          duration: 1500
         }).present();
       } else {
         this.toast.create({
           message: `Could not find authentication details.`,
-          duration: 3000
+          duration: 1500
         }).present();
       }
     })
