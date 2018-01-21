@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import { TabsPage } from '../tabs/tabs';
-import { UserProfilePage } from '../userprofile/userprofile';
 
 import { ProfiledetailsPage } from '../profiledetails/profiledetails';
 

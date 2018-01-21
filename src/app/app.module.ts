@@ -8,7 +8,6 @@ import { MessagePage } from '../pages/message/message';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PopoverPage } from '../pages/search/search';
-import { UserProfilePage } from '../pages/userprofile/userprofile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +25,6 @@ import { AngularFireAuthModule } from "angularfire2/auth";
     MessagePage,
     ProfilePage,
     TabsPage,
-    UserProfilePage,
     PopoverPage
   ],
   imports: [
@@ -51,7 +49,6 @@ import { AngularFireAuthModule } from "angularfire2/auth";
     MessagePage,
     ProfilePage,
     TabsPage,
-    UserProfilePage,
     PopoverPage
   ],
   providers: [
