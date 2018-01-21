@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
+import { TabsPage } from '../tabs/tabs';
 
 import { AngularFireAuth } from "angularfire2/auth";
 /**
@@ -31,6 +32,10 @@ export class RegisterPage {
     }
     catch(e) {
       console.error(e);
+    }
+    const result = this.afAuth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
+    if (result) {
+      this.navCtrl.setRoot(TabsPage);
     }
   }
 
