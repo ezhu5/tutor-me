@@ -29,5 +29,5 @@ export class WelcomePage {
   login() {
     this.navCtrl.push('LoginPage')
   }
-
+  
 }
