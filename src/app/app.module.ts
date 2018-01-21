@@ -14,10 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
-
+import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from "angularfire2/auth";
-
 
 @NgModule({
   declarations: [
@@ -40,7 +39,8 @@ import { AngularFireAuthModule } from "angularfire2/auth";
         storageBucket: "",
         messagingSenderId: "232229048331"
       }),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

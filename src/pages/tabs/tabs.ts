@@ -4,6 +4,7 @@ import { SearchPage } from '../search/search';
 import { MessagePage } from '../message/message';
 import { ProfilePage } from '../profile/profile';
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
