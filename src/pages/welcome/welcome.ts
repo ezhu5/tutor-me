@@ -22,4 +22,12 @@ export class WelcomePage {
     console.log('ionViewDidLoad WelcomePage');
   }
 
+  register() {
+    this.navCtrl.push('RegisterPage')
+  }
+
+  login() {
+    this.navCtrl.push('LoginPage')
+  }
+
 }
