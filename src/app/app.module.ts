@@ -8,16 +8,16 @@ import { MessagePage } from '../pages/message/message';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PopoverPage } from '../pages/search/search';
+import { UserProfilePage } from '../pages/userprofile/userprofile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
-
+import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from "angularfire2/auth";
-
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { AngularFireAuthModule } from "angularfire2/auth";
     MessagePage,
     ProfilePage,
     TabsPage,
+    UserProfilePage,
     PopoverPage
   ],
   imports: [
@@ -40,7 +41,8 @@ import { AngularFireAuthModule } from "angularfire2/auth";
         storageBucket: "",
         messagingSenderId: "232229048331"
       }),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,6 +51,7 @@ import { AngularFireAuthModule } from "angularfire2/auth";
     MessagePage,
     ProfilePage,
     TabsPage,
+    UserProfilePage,
     PopoverPage
   ],
   providers: [

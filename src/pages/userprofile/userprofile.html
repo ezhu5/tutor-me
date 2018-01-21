@@ -1,0 +1,35 @@
+<!--
+  Generated template for the UserProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>UserProfile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+   <ion-item>
+      <ion-label floating> Username </ion-label>
+      <ion-input [(ngModel)]="userprofile.username"> </ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-label floating> First Name </ion-label>
+      <ion-input [(ngModel)]="userprofile.firstName"> </ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-label floating> Last Name </ion-label>
+      <ion-input [(ngModel)]="userprofile.lastName"> </ion-input>
+   </ion-item>
+
+   <button ion-button clear block (click)="createUserProfile()"> Create Profile </button>
+
+</ion-content>
