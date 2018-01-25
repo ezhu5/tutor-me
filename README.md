@@ -10,7 +10,7 @@ To run the app, you must have downloaded Ionic and Cordova.
 
 Also download Firebase through npm install firebase angularfire2 --save.
 
-## For chat setup
+## For chat setup server
 
 
 ```
